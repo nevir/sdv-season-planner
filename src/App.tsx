@@ -4,6 +4,7 @@ import * as React from 'react';
 import { ItemTable } from './components';
 import { items } from './data';
 import { Item, Season } from './data/types';
+import { getDesiredCountForItem } from './models';
 
 import './App.css';
 
@@ -47,7 +48,7 @@ export default class App extends React.Component<{}, State> {
       items = _.filter(items, item => !item.seasons || _.includes(item.seasons, season));
     }
 
-    return _.sortBy(items, 'source', 'name');
+    return _.sortBy(items, i => getDesiredCountForItem(i) === 0, 'source', 'name');
   }
 
   _onSeasonChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
