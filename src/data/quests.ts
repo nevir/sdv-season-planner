@@ -2,6 +2,13 @@ import { Quest, Season } from './types';
 
 // Dated Quests
 
+export const JodisRequest: Quest = {
+  name: `Jodi's Request`,
+  year: 1,
+  season: Season.Spring,
+  day: 19,
+};
+
 export const ClintsAttempt: Quest = {
   name: `Clint's Attempt`,
   year: 1,

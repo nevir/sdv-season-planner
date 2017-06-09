@@ -107,3 +107,35 @@ export const CrabPot: Bundle = {
   name: `Crab Pot Bundle`,
   location: Bundle.Location.FishTank,
 };
+
+// Pantry
+
+export const SpringCrops: Bundle = {
+  name: `Spring Crops Bundle`,
+  location: Bundle.Location.Pantry,
+};
+
+export const SummerCrops: Bundle = {
+  name: `Summer Crops Bundle`,
+  location: Bundle.Location.Pantry,
+};
+
+export const FallCrops: Bundle = {
+  name: `Fall Crops Bundle`,
+  location: Bundle.Location.Pantry,
+};
+
+export const QualityCrops: Bundle = {
+  name: `Quality Crops Bundle`,
+  location: Bundle.Location.Pantry,
+};
+
+export const Animal: Bundle = {
+  name: `Animal Bundle`,
+  location: Bundle.Location.Pantry,
+};
+
+export const Artisan: Bundle = {
+  name: `Artisan Bundle`,
+  location: Bundle.Location.Pantry,
+};
