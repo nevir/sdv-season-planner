@@ -30,8 +30,11 @@ export type Item = Item.Crop | Item.Fish | Item.Foraged | Item.Loot;
 export namespace Item {
   export enum Location {
     Desert,
+    ForestPond,
     ForestRiver,
+    Mine,
     MountainLake,
+    Ocean,
     SecretWoodsPond,
     Sewers,
     TownRiver,
@@ -67,7 +70,7 @@ export namespace Item {
 
   export interface Fish extends Base {
     source: Item.Source.Fishing;
-    location: Item.Location[];
+    locations: Item.Location[];
   }
 
   export interface Foraged extends Base {
