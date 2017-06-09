@@ -27,6 +27,21 @@ export function getCountForUse(use: Use) {
   return 1;
 }
 
+export function getDesiredCountForItem(item: Item): number {
+  let count = 0;
+  for (const use of item.uses) {
+    if (isItemUseComplete(item, use)) continue;
+    if (isGiftUse(use)) continue;
+    if (isBundleUse(use)) {
+      count += use.count || 1;
+    } else {
+      count += 1;
+    }
+  }
+
+  return count;
+}
+
 export function itemUseKey(use: Use): string {
   if (isBundleUse(use)) {
     return `bundle:${use.bundle.name}`;

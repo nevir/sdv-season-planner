@@ -89,6 +89,8 @@ export class ItemUses extends React.Component<Props, State> {
       },
     });
     setItemUseComplete(item, use, checked);
+    // Until we have actual state management.
+    window.location.reload();
   }
 
 }

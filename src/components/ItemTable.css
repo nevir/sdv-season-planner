@@ -14,3 +14,7 @@ table.items th,
 table.items td {
   padding: 10px;
 }
+
+table.items tr.complete {
+  opacity: 0.2;
+}

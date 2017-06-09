@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { Item, isBundleUse, isGiftUse } from '../data/types';
-import { getCurrentCount, setCurrentCount } from '../models';
+import { Item } from '../data/types';
+import { getCurrentCount, getDesiredCountForItem, setCurrentCount } from '../models';
 
 import './ItemCount.css';
 
@@ -20,8 +20,9 @@ export class ItemCount extends React.Component<Props, State> {
   }
 
   render() {
+    const { item } = this.props;
     const { currentCount } = this.state;
-    const numDesired = this._calcNumDesired();
+    const numDesired = getDesiredCountForItem(item);
 
     return (
       <div className={`count ${currentCount >= numDesired ? 'have-enough' : ''}`}>
@@ -29,20 +30,6 @@ export class ItemCount extends React.Component<Props, State> {
         &nbsp;of {numDesired}
       </div>
     );
-  }
-
-  _calcNumDesired() {
-    let count = 0;
-    for (const use of this.props.item.uses) {
-      if (isGiftUse(use)) continue;
-      if (isBundleUse(use)) {
-        count += use.count || 1;
-      } else {
-        count += 1;
-      }
-    }
-
-    return count;
   }
 
   _onChange = (event: React.ChangeEvent<HTMLInputElement>) => {

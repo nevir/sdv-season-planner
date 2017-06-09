@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { Item } from '../data/types';
 import { ItemCount, ItemUses } from '.';
+import { getDesiredCountForItem } from '../models';
 
 import './ItemTable.css';
 
@@ -34,7 +35,7 @@ export class ItemTable extends React.Component<Props, null> {
 
   _renderItem = (item: Item) => {
     return (
-      <tr key={item.name}>
+      <tr key={item.name} className={getDesiredCountForItem(item) === 0 ? 'complete' : ''}>
         <td>{Item.Source[item.source]}</td>
         <td>{item.name}</td>
         <td><ItemCount item={item} /></td>
