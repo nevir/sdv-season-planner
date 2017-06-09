@@ -11,27 +11,30 @@ const allItems = _.values(items) as Item[];
 
 interface State {
   items: Item[];
+  season?: Season;
 }
 
 export default class App extends React.Component<{}, State> {
 
   componentWillMount() {
+    const season = Season.Spring;
     this.setState({
-      items: this._items(),
+      items: this._items(season),
+      season,
     });
   }
 
   render() {
-    const { items } = this.state;
+    const { items, season } = this.state;
 
     return (
       <div>
         <select onChange={this._onSeasonChange}>
-          <option value='all'>All Seasons</option>
-          <option value={Season.Spring}>Spring</option>
-          <option value={Season.Summer}>Summer</option>
-          <option value={Season.Fall}>Fall</option>
-          <option value={Season.Winter}>Winter</option>
+          <option value='all' selected={!season}>All Seasons</option>
+          <option value={Season.Spring} selected={season === Season.Spring}>Spring</option>
+          <option value={Season.Summer} selected={season === Season.Summer}>Summer</option>
+          <option value={Season.Fall} selected={season === Season.Fall}>Fall</option>
+          <option value={Season.Winter} selected={season === Season.Winter}>Winter</option>
         </select>
         <ItemTable items={items} />
       </div>
@@ -44,7 +47,7 @@ export default class App extends React.Component<{}, State> {
       items = _.filter(items, item => !item.seasons || _.includes(item.seasons, season));
     }
 
-    return _.sortBy(items, 'name');
+    return _.sortBy(items, 'source', 'name');
   }
 
   _onSeasonChange = (event: React.ChangeEvent<HTMLSelectElement>) => {

@@ -171,6 +171,7 @@ export const Grape: Item = {
 export const RainbowShell: Item = {
   name: `Rainbow Shell`,
   source: Item.Source.Foraging,
+  seasons: [Season.Summer],
   uses: [
     { quest: quests.TheMysteriousQi },
   ],
