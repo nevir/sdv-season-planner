@@ -9,6 +9,13 @@ export const GrannysGift: Quest = {
   day: 15,
 };
 
+export const ClintsAttempt: Quest = {
+  name: `Clint's Attempt`,
+  year: 1,
+  season: Season.Winter,
+  day: 6,
+};
+
 // Special Quests
 
 export const TheMysteriousQi: Quest = {
