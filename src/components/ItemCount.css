@@ -1,0 +1,16 @@
+.count.have-enough input {
+  background-color: #99ff99;
+}
+
+.count input {
+  width: 36px;
+  font-size: inherit;
+  text-align: right;
+}
+
+.count input::-webkit-inner-spin-button,
+.count input::-webkit-outer-spin-button {
+  opacity: 1;
+  margin-right: -2px;
+  padding-left: 2px;
+}

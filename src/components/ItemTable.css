@@ -1,0 +1,16 @@
+table.items {
+  border-collapse: collapse;
+}
+
+table.items th {
+  text-align: left;
+}
+
+table.items td {
+  border: 1px solid #bbb;
+}
+
+table.items th,
+table.items td {
+  padding: 10px;
+}

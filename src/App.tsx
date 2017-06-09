@@ -1,22 +1,34 @@
+import * as _ from 'lodash';
 import * as React from 'react';
+
+import { ItemTable } from './components';
+import { items, types } from './data';
+
 import './App.css';
 
-const logo = require('./logo.svg');
-
-class App extends React.Component<{}, null> {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+interface State {
+  items: types.Item[];
 }
 
-export default App;
+export default class App extends React.Component<{}, State> {
+
+  componentWillMount() {
+    this.setState({
+      items: this._items(),
+    });
+  }
+
+  render() {
+    const { items } = this.state;
+
+    return <ItemTable items={items} />;
+  }
+
+  _items() {
+    return _(items)
+      .values()
+      .sortBy('name')
+      .value() as types.Item[];
+  }
+
+}

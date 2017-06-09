@@ -80,6 +80,22 @@ export namespace Item {
 
 export type Use = Use.BundleUse | Use.GiftUse | Use.HelpWantedUse | Use.QuestUse;
 
+export function isBundleUse(use: Use): use is Use.BundleUse {
+  return 'bundle' in use;
+}
+
+export function isGiftUse(use: Use): use is Use.GiftUse {
+  return 'love' in use;
+}
+
+export function isHelpWantedUse(use: Use): use is Use.HelpWantedUse {
+  return 'bounty' in use;
+}
+
+export function isQuestUse(use: Use): use is Use.QuestUse {
+  return 'quest' in use;
+}
+
 export namespace Use {
   export interface BundleUse {
     bundle: Bundle;

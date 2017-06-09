@@ -169,7 +169,7 @@ export const Grape: Item = {
 };
 
 export const RainbowShell: Item = {
-  name: `Cockle`,
+  name: `Rainbow Shell`,
   source: Item.Source.Foraging,
   uses: [
     { quest: quests.TheMysteriousQi },
