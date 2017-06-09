@@ -1,5 +1,22 @@
 import { Bundle } from './types';
 
+// Boiler Room
+
+export const Blacksmith: Bundle = {
+  name: `Blacksmith's Bundle`,
+  location: Bundle.Location.BoilerRoom,
+};
+
+export const Geologist: Bundle = {
+  name: `Geologist's Bundle`,
+  location: Bundle.Location.BoilerRoom,
+};
+
+export const Adventurer: Bundle = {
+  name: `Adventurer's Bundle`,
+  location: Bundle.Location.BoilerRoom,
+};
+
 // Bulletin Board
 
 export const Chef: Bundle = {

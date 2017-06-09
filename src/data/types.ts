@@ -78,7 +78,7 @@ export namespace Item {
 
 // Uses
 
-export type Use = Use.BundleUse | Use.GiftUse | Use.HelpWantedUse | Use.QuestUse;
+export type Use = Use.BundleUse | Use.GiftUse | Use.HelpWantedUse | Use.MuseumUse | Use.QuestUse;
 
 export function isBundleUse(use: Use): use is Use.BundleUse {
   return 'bundle' in use;
@@ -90,6 +90,10 @@ export function isGiftUse(use: Use): use is Use.GiftUse {
 
 export function isHelpWantedUse(use: Use): use is Use.HelpWantedUse {
   return 'bounty' in use;
+}
+
+export function isMuseumUse(use: Use): use is Use.MuseumUse {
+  return 'museum' in use;
 }
 
 export function isQuestUse(use: Use): use is Use.QuestUse {
@@ -109,6 +113,10 @@ export namespace Use {
 
   export interface HelpWantedUse {
     bounty: number;
+  }
+
+  export interface MuseumUse {
+    museum: true;
   }
 
   export interface QuestUse {

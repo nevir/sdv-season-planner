@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Item, Use, Person, isBundleUse, isGiftUse, isHelpWantedUse, isQuestUse } from '../data/types';
+import { Item, Use, Person, isBundleUse, isGiftUse, isHelpWantedUse, isMuseumUse, isQuestUse } from '../data/types';
 import { itemUseKey, isItemUseComplete, setItemUseComplete } from '../models';
 
 import './ItemUses.css';
@@ -39,6 +39,8 @@ export class ItemUses extends React.Component<Props, State> {
       info = this._renderGiftUse(use);
     } else if (isHelpWantedUse(use)) {
       info = this._renderHelpWantedUse(use);
+    } else if (isMuseumUse(use)) {
+      info = this._renderMuseumUse(use);
     } else if (isQuestUse(use)) {
       info = this._renderQuestUse(use);
     } else {
@@ -66,6 +68,10 @@ export class ItemUses extends React.Component<Props, State> {
 
   _renderHelpWantedUse(use: Use.HelpWantedUse) {
     return <div className='bounty' title={`${use.bounty}g`}>Help Wanted</div>;
+  }
+
+  _renderMuseumUse(use: Use.MuseumUse) {
+    return <div className='museum'>Donate To Museum</div>;
   }
 
   _renderQuestUse(use: Use.QuestUse) {

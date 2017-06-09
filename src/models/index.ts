@@ -1,4 +1,4 @@
-import { Item, Use, isBundleUse, isGiftUse, isHelpWantedUse, isQuestUse } from '../data/types';
+import { Item, Use, isBundleUse, isGiftUse, isHelpWantedUse, isQuestUse, isMuseumUse } from '../data/types';
 
 export function getCurrentCount(item: Item): number {
   return parseInt(localStorage.getItem(`ItemCount/${item.name}`) || '0', 10);
@@ -34,6 +34,8 @@ export function itemUseKey(use: Use): string {
     return `person:${use.love}`;
   } else if (isHelpWantedUse(use)) {
     return `bounty`;
+  } else if (isMuseumUse(use)) {
+    return `museum`;
   } else if (isQuestUse(use)) {
     return `quest:${use.quest.name}`;
   } else {

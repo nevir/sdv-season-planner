@@ -29,6 +29,36 @@ export const Cockle: Item = {
   ],
 };
 
+export const EarthCrystal: Item = {
+  name: `Earth Crystal`,
+  source: Item.Source.Foraging,
+  uses: [
+    { bundle: bundles.Geologist },
+    { museum: true },
+    { bounty: 150 },
+  ],
+};
+
+export const FireQuarts: Item = {
+  name: `Fire Quartz`,
+  source: Item.Source.Foraging,
+  uses: [
+    { bundle: bundles.Geologist },
+    { museum: true },
+    { bounty: 300 },
+  ],
+};
+
+export const FrozenTear: Item = {
+  name: `Frozen Tear`,
+  source: Item.Source.Foraging,
+  uses: [
+    { bundle: bundles.Geologist },
+    { museum: true },
+    { bounty: 225 },
+  ],
+};
+
 export const Mussel: Item = {
   name: `Mussel`,
   source: Item.Source.Foraging,
@@ -55,6 +85,16 @@ export const PurpleMushroom: Item = {
     { love: Person.Wizard },
   ],
   notes: `Found in the Mines (82+)`,
+};
+
+export const Quartz: Item = {
+  name: `Quartz`,
+  source: Item.Source.Foraging,
+  uses: [
+    { bundle: bundles.Geologist },
+    { museum: true },
+    { bounty: 75 },
+  ],
 };
 
 export const SeaUrchin: Item = {
