@@ -38,10 +38,13 @@ export namespace Item {
   }
 
   export enum Source {
+    BeachForaging,
     Farming,
     Fishing,
-    Foraging,
+    MineForaging,
     Mines,
+    MushroomForaging,
+    PlantForaging,
   }
 
   export enum Quality {
@@ -68,7 +71,10 @@ export namespace Item {
   }
 
   export interface Foraged extends Base {
-    source: Item.Source.Foraging;
+    source: Item.Source.BeachForaging
+          | Item.Source.MineForaging
+          | Item.Source.MushroomForaging
+          | Item.Source.PlantForaging;
   }
 
   export interface Loot extends Base {

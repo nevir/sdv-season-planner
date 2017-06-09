@@ -6,7 +6,7 @@ import { Item, Person, Season } from '../types';
 
 export const CaveCarrot: Item = {
   name: `Cave Carrot`,
-  source: Item.Source.Foraging,
+  source: Item.Source.MineForaging,
   uses: [
     { bundle: bundles.ExoticForaging },
     { bounty: 75 },
@@ -15,7 +15,7 @@ export const CaveCarrot: Item = {
 
 export const Clam: Item = {
   name: `Clam`,
-  source: Item.Source.Foraging,
+  source: Item.Source.BeachForaging,
   uses: [
     { bundle: bundles.CrabPot },
   ],
@@ -23,7 +23,7 @@ export const Clam: Item = {
 
 export const Cockle: Item = {
   name: `Cockle`,
-  source: Item.Source.Foraging,
+  source: Item.Source.BeachForaging,
   uses: [
     { bundle: bundles.CrabPot },
   ],
@@ -31,7 +31,7 @@ export const Cockle: Item = {
 
 export const EarthCrystal: Item = {
   name: `Earth Crystal`,
-  source: Item.Source.Foraging,
+  source: Item.Source.MineForaging,
   uses: [
     { bundle: bundles.Geologist },
     { museum: true },
@@ -39,9 +39,9 @@ export const EarthCrystal: Item = {
   ],
 };
 
-export const FireQuarts: Item = {
+export const FireQuartz: Item = {
   name: `Fire Quartz`,
-  source: Item.Source.Foraging,
+  source: Item.Source.MineForaging,
   uses: [
     { bundle: bundles.Geologist },
     { museum: true },
@@ -51,7 +51,7 @@ export const FireQuarts: Item = {
 
 export const FrozenTear: Item = {
   name: `Frozen Tear`,
-  source: Item.Source.Foraging,
+  source: Item.Source.MineForaging,
   uses: [
     { bundle: bundles.Geologist },
     { museum: true },
@@ -61,7 +61,7 @@ export const FrozenTear: Item = {
 
 export const Mussel: Item = {
   name: `Mussel`,
-  source: Item.Source.Foraging,
+  source: Item.Source.BeachForaging,
   uses: [
     { bundle: bundles.CrabPot },
   ],
@@ -69,7 +69,7 @@ export const Mussel: Item = {
 
 export const Oyster: Item = {
   name: `Oyster`,
-  source: Item.Source.Foraging,
+  source: Item.Source.BeachForaging,
   uses: [
     { bundle: bundles.CrabPot },
   ],
@@ -77,7 +77,7 @@ export const Oyster: Item = {
 
 export const PurpleMushroom: Item = {
   name: `Purple Mushroom`,
-  source: Item.Source.Foraging,
+  source: Item.Source.MushroomForaging,
   uses: [
     { bundle: bundles.FieldResearch },
     { bundle: bundles.ExoticForaging },
@@ -89,7 +89,7 @@ export const PurpleMushroom: Item = {
 
 export const Quartz: Item = {
   name: `Quartz`,
-  source: Item.Source.Foraging,
+  source: Item.Source.MineForaging,
   uses: [
     { bundle: bundles.Geologist },
     { museum: true },
@@ -99,7 +99,7 @@ export const Quartz: Item = {
 
 export const SeaUrchin: Item = {
   name: `Sea Urchin`,
-  source: Item.Source.Foraging,
+  source: Item.Source.BeachForaging,
   uses: [
     { bundle: bundles.Dye },
   ],
@@ -109,7 +109,7 @@ export const SeaUrchin: Item = {
 
 export const CommonMushroom: Item = {
   name: `Common Mushroom`,
-  source: Item.Source.Foraging,
+  source: Item.Source.MushroomForaging,
   seasons: [Season.Spring, Season.Fall],
   notes: `During Spring, only found in Secret Woods`,
   uses: [
@@ -120,7 +120,7 @@ export const CommonMushroom: Item = {
 
 export const RedMushroom: Item = {
   name: `Red Mushroom`,
-  source: Item.Source.Foraging,
+  source: Item.Source.MushroomForaging,
   seasons: [Season.Summer, Season.Fall],
   uses: [
     { bundle: bundles.Dye },
@@ -134,7 +134,7 @@ export const RedMushroom: Item = {
 
 export const Daffodil: Item = {
   name: `Daffodil`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Spring],
   uses: [
     { bundle: bundles.SpringForaging },
@@ -145,7 +145,7 @@ export const Daffodil: Item = {
 
 export const Dandelion: Item = {
   name: `Dandelion`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Spring],
   uses: [
     { bundle: bundles.SpringForaging },
@@ -155,7 +155,7 @@ export const Dandelion: Item = {
 
 export const Leek: Item = {
   name: `Leek`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Spring],
   uses: [
     { bundle: bundles.SpringForaging },
@@ -167,7 +167,7 @@ export const Leek: Item = {
 
 export const Morel: Item = {
   name: `Morel`,
-  source: Item.Source.Foraging,
+  source: Item.Source.MushroomForaging,
   seasons: [Season.Spring],
   uses: [
     { bundle: bundles.ExoticForaging },
@@ -177,7 +177,7 @@ export const Morel: Item = {
 
 export const WildHorseradish: Item = {
   name: `Wild Horseradish`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Spring],
   uses: [
     { bundle: bundles.SpringForaging },
@@ -190,7 +190,7 @@ export const WildHorseradish: Item = {
 
 export const FiddleheadFerm: Item = {
   name: `Fiddlehead Ferm`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Summer],
   uses: [
     { bundle: bundles.Chef },
@@ -199,7 +199,7 @@ export const FiddleheadFerm: Item = {
 
 export const Grape: Item = {
   name: `Grape`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Summer],
   uses: [
     { bundle: bundles.SummerForaging },
@@ -210,7 +210,7 @@ export const Grape: Item = {
 
 export const RainbowShell: Item = {
   name: `Rainbow Shell`,
-  source: Item.Source.Foraging,
+  source: Item.Source.BeachForaging,
   seasons: [Season.Summer],
   uses: [
     { quest: quests.TheMysteriousQi },
@@ -219,7 +219,7 @@ export const RainbowShell: Item = {
 
 export const SpiceBerry: Item = {
   name: `Spice Berry`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Summer],
   uses: [
     { bundle: bundles.SummerForaging },
@@ -229,7 +229,7 @@ export const SpiceBerry: Item = {
 
 export const SweetPea: Item = {
   name: `Sweet Pea`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Summer],
   uses: [
     { bundle: bundles.SummerForaging },
@@ -242,7 +242,7 @@ export const SweetPea: Item = {
 
 export const Blackberry: Item = {
   name: `Blackberry`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Fall],
   uses: [
     { bundle: bundles.FallForaging },
@@ -252,7 +252,7 @@ export const Blackberry: Item = {
 
 export const Hazelnut: Item = {
   name: `Hazelnut`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Fall],
   uses: [
     { bundle: bundles.FallForaging },
@@ -262,7 +262,7 @@ export const Hazelnut: Item = {
 
 export const WildPlum: Item = {
   name: `Wild Plum`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Fall],
   uses: [
     { bundle: bundles.FallForaging },
@@ -274,7 +274,7 @@ export const WildPlum: Item = {
 
 export const Crocus: Item = {
   name: `Crocus`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Winter],
   uses: [
     { bundle: bundles.WinterForaging },
@@ -285,7 +285,7 @@ export const Crocus: Item = {
 
 export const CrystalFruit: Item = {
   name: `Crystal Fruit`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Winter],
   uses: [
     { bundle: bundles.WinterForaging },
@@ -295,7 +295,7 @@ export const CrystalFruit: Item = {
 
 export const NautilusShell: Item = {
   name: `Nautilus Shell`,
-  source: Item.Source.Foraging,
+  source: Item.Source.BeachForaging,
   seasons: [Season.Winter],
   uses: [
     { bundle: bundles.FieldResearch },
@@ -304,7 +304,7 @@ export const NautilusShell: Item = {
 
 export const SnowYam: Item = {
   name: `Snow Yam`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Winter],
   uses: [
     { bundle: bundles.WinterForaging },
@@ -314,7 +314,7 @@ export const SnowYam: Item = {
 
 export const WinterRoot: Item = {
   name: `Winter Root`,
-  source: Item.Source.Foraging,
+  source: Item.Source.PlantForaging,
   seasons: [Season.Winter],
   uses: [
     { bundle: bundles.WinterForaging },
